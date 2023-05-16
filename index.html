@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <img class="logo" src="./images/logo.svg" alt="">
+      <img class="img-title" src="./images/hero-mobile.jpg" alt="">
+      <img class="img-title-desktop" src="./images/hero-desktop.jpg" alt="">
+      <article>
+        <h1 class="header"><span class="red-color">We're</span><br />coming <br />soon</h1>
+    
+        <p>Hello fellow shoppers! We're currently building our new fashion store. 
+          Add your email below to stay up-to-date with announcements and our launch deals.
+        </p>
+      </article>
+      <div class="email-checker">
+        <form action="" class="form">
+            <input class="email-input" type="email" placeholder="Email Address" oninput="checker()">
+            <img class="icon-error" src="./images/icon-error.svg" alt="">
+            <button type="submit" class="submit-button">
+              <img src="./images/icon-arrow.svg" alt="">
+            </button>
+            <label for="email-input" class="error-msg">Please provide a valid email</label>
+        </form>
+      </div>
+    </div>
+  
+    <img class="img-desktop" src="images/hero-desktop.jpg" alt="">
+  </main>
+
+  
+  <script>
+
+      let emailInput = document.querySelector(".email-input");
+      let errorMsg = document.querySelector(".error-msg");
+      let mailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+      let button = document.querySelector(".submit-button");
+
+      button.addEventListener("click" , () => {
+        if(emailInput.value.match(mailRegex)){
+          emailInput.classList.add("border-outline");
+
+        }else if(emailInput == " "){
+          emailInput.classList.add("border-outline");
+          
+        }else{
+          errorMsg.style.display = "block";
+        }
+      })
+
+  </script>
+
+</body>
+</html>

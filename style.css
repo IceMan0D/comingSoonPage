@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+    /* Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
+
+    background: linear-gradient(135deg,hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+.logo{
+    margin: 2rem 3rem;
+}
+
+.img-title{
+    width: 100%;
+}
+
+.img-title-desktop{
+    display: none;
+}
+
+article{
+    text-align: center;
+}
+
+.header{
+    margin:  4rem 0 0 0;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 0.7rem;
+}
+
+
+.red-color{
+    width: 100%;
+    font-weight: 300;    
+}
+
+.red-color , p {
+    color: hsl(0, 36%, 70%);
+}
+
+
+article > p{
+    padding: 2rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+}
+
+/* email form  */
+
+.email-checker{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    position: relative;
+    width: 350px;
+}
+
+.email-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    width: 350px;
+    height: 50px;
+    border: 1px solid hsl(0, 6%, 24%);
+    border-radius: 50px;
+    padding: 1rem;
+    outline: 0;
+}
+
+.email-input::placeholder{
+    color: hsl(0, 6%, 24%);
+    font-weight: 300;
+}
+
+.email:active,
+.email-input:focus{
+    border: 1px solid hsl(2, 89%, 67%);
+}
+
+/*button*/
+
+.submit-button {
+    position: absolute;
+    width: 80px;
+    height: 50px;
+    color: #fff;
+    top: 0;
+    right: 0;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: linear-gradient(135deg,hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+    box-shadow: 1px 7px 30px 0 hsl(0, 36%, 70%);;
+}
+
+.submit-button:hover{
+    background: linear-gradient(135deg, hsl(358, 76%, 92%), hsl(0, 77%, 88%));
+}
+
+.icon-error{
+    display: none;
+    position: absolute;
+    top: 13px;
+    right: 100px;
+}
+
+.error-msg{
+    display: none;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+    font-size: 13px;
+    color: red;
+}
+
+.border-outline{
+    outline: none;
+    border: 2px solid red;
+}
+
+.img-desktop{
+    display: none;
+}
+
+
+@media (min-width: 765px) {
+    body{
+        background-image: url(./images/bg-pattern-desktop.svg);
+    }
+
+    main{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo{
+        margin: 0;
+        padding: 0;
+
+    }
+    .logo , article{
+        margin-left: 8rem;
+        margin-top: 8rem;
+    }
+
+    article{
+        text-align:left;
+    }
+    
+    article > p{
+        margin-top: 2rem;
+        padding: 0rem;
+        line-height: 1.5rem;
+        font-weight: 400;
+        width: 40%;
+    }
+
+    .img-title{
+        display: none;
+    }
+
+    .email-checker{
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 4rem;
+        margin-left: 7rem;
+    }
+
+    .img-desktop{
+        display: block;
+        height: 100vh;
+    }
+
+    
+}
